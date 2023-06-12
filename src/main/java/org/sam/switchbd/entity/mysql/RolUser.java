@@ -1,20 +1,17 @@
 package org.sam.switchbd.entity.mysql;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name ="rol_user" )
+@Table(name ="roles" )
 @NoArgsConstructor
 @Data
 public class RolUser {
 
     @Id
-    @Column(name = "id_rol")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "rol_description")
