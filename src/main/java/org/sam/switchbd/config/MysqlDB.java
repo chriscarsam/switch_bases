@@ -45,6 +45,7 @@ public class MysqlDB {
         factoryBean.setJpaVendorAdapter(vendor);
         Map<String, Object> properties = new HashMap<>();
         properties.put("hibernate.dialect", dialect);
+        properties.put("hibernate.hbm2ddl.auto", "create-drop");
         factoryBean.setJpaPropertyMap(properties);
         return factoryBean;
     }
